@@ -18,7 +18,7 @@ jobs:
       - name: Get team members
         id: get_team_members
         run: |
-          TEAM_NAME="Frontend" 
+          TEAM_NAME="frontend" 
           ORG_NAME="2024-Capstone-Team"  # Your organization name
           GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           
@@ -27,8 +27,19 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/orgs/${ORG_NAME}/teams/${TEAM_NAME}/members)
           
+          # Debugging: Print the raw response to verify the structure
+          echo "$MEMBERS"
+          
           # Exclude the PR creator
           PR_CREATOR=${{ github.actor }}
+          
+          # Check if MEMBERS is empty or contains errors
+          if [[ "$MEMBERS" == *"Not Found"* ]]; then
+            echo "Error: Team or members not found"
+            exit 1
+          fi
+
+          # Extract member names and exclude PR creator
           MEMBER_NAMES=$(echo "$MEMBERS" | jq -r '.[].login' | grep -v "^${PR_CREATOR}$")
 
           # Randomly pick a reviewer from the remaining team members
