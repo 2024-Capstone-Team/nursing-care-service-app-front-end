@@ -41,7 +41,6 @@ const PatientLoginPage: React.FC = () => {
         <form
           className="space-y-4 flex flex-col items-center"
           onSubmit={handleLogin}
-          style={{ margin: 80, width: 250 }}
         >
           <div
             className="flex items-center"
