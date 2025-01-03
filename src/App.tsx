@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./index.css";
+import './index.css'
 
 import PreLoginPage from "./pages/PreLoginPage";
 
@@ -18,7 +18,6 @@ import CustomRequestPage from "./pages/patient/CustomRequestPage";
 
 /* Context */
 import { FavoriteRequestsProvider } from "./context/FavoriteRequestsContext";
-import SignUp from "./pages/patient/SignUp";
 
 const App: React.FC = () => {
   return (
@@ -46,9 +45,7 @@ const App: React.FC = () => {
             </FavoriteRequestsProvider>
           }
         />
-        <Route path="/custom-request" element={<CustomRequestPage />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/patient-mainpage" element={<PatientMainPage />} />
+        <Route path="/custom-request" element={<CustomRequestPage />}/>
       </Routes>
     </Router>
   );
