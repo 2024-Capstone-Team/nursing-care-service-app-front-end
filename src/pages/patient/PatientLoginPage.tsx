@@ -166,7 +166,7 @@ const PatientLoginPage: React.FC = () => {
         <form style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ fontSize: 12, marginTop: 8 }}>소셜 로그인</div>
           <img
-            src="public\icons\kakaotalk_icon.png"
+            src="public\icons\kakaotalk-icon.png"
             className="w-[12%] h-auto object-cover"
             style={{
               marginLeft: 20,

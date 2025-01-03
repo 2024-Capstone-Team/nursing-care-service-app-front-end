@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./index.css";
 
 import PreLoginPage from "./pages/PreLoginPage";
 
@@ -22,6 +23,23 @@ const App: React.FC = () => {
         <Route path="/nurse-main" element={<NurseMainPage />} />
         <Route path="/patient-main" element={<PatientMainPage />} />
         <Route path="/choose-patient-type" element={<ChoosePatientType />} />
+        <Route
+          path="/patient-chat"
+          element={
+            <FavoriteRequestsProvider>
+              <PatientChatPage />
+            </FavoriteRequestsProvider>
+          }
+        />
+        <Route
+          path="/patient-chat-categories"
+          element={
+            <FavoriteRequestsProvider>
+              <PatientChatCategories />
+            </FavoriteRequestsProvider>
+          }
+        />
+        <Route path="/custom-request" element={<CustomRequestPage />} />
       </Routes>
     </Router>
   );
