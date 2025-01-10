@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import TestNotification from '../components/TestNotification';
 
 const PreLoginPage: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const PreLoginPage: React.FC = () => {
               Patient Login
             </button>
           </Link>
+            <TestNotification />
         </div>
       </div>
     </div>
