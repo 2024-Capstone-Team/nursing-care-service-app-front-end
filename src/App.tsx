@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./index.css";
+import './index.css'
 
 import PreLoginPage from "./pages/PreLoginPage";
 
@@ -15,11 +15,9 @@ import ChoosePatientType from "./pages/patient/ChoosePatientType";
 import PatientChatPage from "./pages/patient/PatientChatPage";
 import PatientChatCategories from "./pages/patient/PatientChatCategoriesPage";
 import CustomRequestPage from "./pages/patient/CustomRequestPage";
-import PatientSchedular from "./pages/patient/PatientSchedular";
 
 /* Context */
 import { FavoriteRequestsProvider } from "./context/FavoriteRequestsContext";
-import SignUp from "./pages/patient/SignUp";
 
 const App: React.FC = () => {
   return (
@@ -31,8 +29,6 @@ const App: React.FC = () => {
         <Route path="/nurse-main" element={<NurseMainPage />} />
         <Route path="/patient-main" element={<PatientMainPage />} />
         <Route path="/choose-patient-type" element={<ChoosePatientType />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/patient-schedular" element={<PatientSchedular />} />
         <Route
           path="/patient-chat"
           element={
@@ -49,7 +45,7 @@ const App: React.FC = () => {
             </FavoriteRequestsProvider>
           }
         />
-        <Route path="/custom-request" element={<CustomRequestPage />} />
+        <Route path="/custom-request" element={<CustomRequestPage />}/>
       </Routes>
     </Router>
   );

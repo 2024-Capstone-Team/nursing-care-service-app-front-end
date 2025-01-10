@@ -32,9 +32,10 @@ const SignUp: React.FC = () => {
 
         <div className="flex flex-col items-center">
           <img
-            src="icons/main-page-logo.png"
-            className="w-[233px] h-[133px] mt-10"
-          />
+            src="\icons\icon-fit.png"
+            className="place-content-center grid mt-[100px] pb-4
+            w-[95%]"
+          ></img>
         </div>
         <div>
           <div className="font-bold text-centered">회원가입</div>
@@ -102,7 +103,7 @@ const SignUp: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="w-[25%] h-[40px] font-bold bg-primary rounded-[10px] text-[13px]"
+              className="w-[25%] h-[40px] font-bold bg-primary rounded-[10px]"
             >
               인증하기
             </button>
@@ -163,10 +164,10 @@ const SignUp: React.FC = () => {
             {/* 여성 */}
             <button
               onClick={() => handleGenderSelect("female")}
-              className={`w-[110px] h-[40px] font-bold rounded-[10px] border ml-3 text-[13px]
+              className={`w-[110px] h-[40px] font-bold rounded-[10px] border ml-3
               ${
                 selectedGender === "female"
-                  ? "bg-primary text-black"
+                  ? "bg-primary text-white"
                   : "bg-primary-200 text-black"
               }`}
             >
@@ -176,7 +177,7 @@ const SignUp: React.FC = () => {
             {/* 남성 */}
             <button
               onClick={() => handleGenderSelect("male")}
-              className={`w-[110px] h-[40px] font-bold rounded-[10px] border ml-2 text-[13px]
+              className={`w-[110px] h-[40px] font-bold rounded-[10px] border ml-2
               ${
                 selectedGender === "male"
                   ? "bg-primary text-black"
@@ -191,7 +192,7 @@ const SignUp: React.FC = () => {
           <button
             onClick={goLogIn}
             type="submit"
-            className="w-[90px] h-[40px] font-bold mt-[50px] bg-primary rounded-[10px] text-[13px]"
+            className="w-[90px] h-[40px] font-bold mt-[50px] bg-primary rounded-[10px]"
           >
             회원가입
           </button>
