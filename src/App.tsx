@@ -23,11 +23,13 @@ import SignUp from "./pages/patient/SignUp";
 import SignUpCheck from "./pages/patient/SignUpCheck";
 
 import PatientSettingPage from "./pages/patient/setting/PatientSettingPage";
-import ChangePhoneNum from "./pages/patient/setting/ChangePhoneNum";
 import ChangeHospital from "./pages/patient/setting/ChangeHospital";
 import ManagePatient from "./pages/patient/setting/ManagePatient";
+import GuardiantSettingPage from "./pages/patient/setting/GuardianSettingPage";
+import ChangePhoneNum from "./pages/patient/setting/ChangePhoneNum";
 import ManageGuardian from "./pages/patient/setting/ManageGuardian";
-
+import AppInfo from "./pages/patient/setting/AppInfo";
+import CustomerService from "./pages/patient/setting/CustomerService";
 
 /* Context */
 import { FavoriteRequestsProvider } from "./context/FavoriteRequestsContext";
@@ -35,6 +37,7 @@ import { UserProvider } from "./context/UserContext";
 
 /* Test */
 import HospitalInfoPage from './pages/HospitalInfoPage';
+import NurseChatPage from "./components/nurse/NurseMessaging";
 import ScheduleTest from "./pages/patient/ScheduleTest";
 
 const App: React.FC = () => {
@@ -58,9 +61,15 @@ const App: React.FC = () => {
           <Route path="/sign-up-check" element={<SignUpCheck />} />
           <Route path="/patient-schedular" element={<PatientSchedular />} />
           <Route path="/patient-setting" element={<PatientSettingPage/>} />
-          <Route path="/change-phonenum" element={<ChangePhoneNum/>} />
+          
           <Route path="/change-hospital" element={<ChangeHospital/>} />
           <Route path="/manage-patient" element={<ManagePatient/>} />
+          
+          <Route path="/guardian-setting" element={<GuardiantSettingPage/>} />
+          <Route path="/change-phonenum" element={<ChangePhoneNum/>} />
+          <Route path="/app-info" element={<AppInfo/>} />
+          <Route path="/customer-service" element={<CustomerService/>} />
+
           <Route path="/manage-guardian" element={<ManageGuardian/>} />
           <Route
             path="/schedule-today"
@@ -96,7 +105,7 @@ const App: React.FC = () => {
           <Route path="/custom-request" element={<CustomRequestPage />} />
 
           {/* Test */}
-          <Route path='/test' element={<HospitalInfoPage />} />
+          <Route path='/test' element={<NurseChatPage />} />
           <Route path='/test-schedule' element={<ScheduleTest />} />
           
         </Routes>
